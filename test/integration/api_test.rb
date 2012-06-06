@@ -10,7 +10,7 @@ class APITest < ActiveSupport::TestCase
   end
 
   def setup
-    Factory.create(:email_confirmed_user,
+    FactoryGirl.create(:email_confirmed_user,
                    :email => 'test@example.com',
                    :password => 'password')
   end

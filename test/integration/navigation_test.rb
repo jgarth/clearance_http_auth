@@ -4,7 +4,7 @@ require 'dummy/test/factories/clearance'
 class NavigationTest < ActiveSupport::IntegrationCase
 
   setup do
-    Factory.create(:email_confirmed_user,
+    FactoryGirl.create(:email_confirmed_user,
                    :email => 'test@example.com',
                    :password => 'password')
   end

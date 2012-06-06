@@ -12,6 +12,6 @@ group :test do
   gem "shoulda"
   gem "factory_girl"
   gem "capybara", ">= 0.4.0"
-  gem "rails",    "~> 3.0.7"
+  gem "rails",    "~> 3.2.5"
   gem "sqlite3-ruby", :require => "sqlite3"
 end
