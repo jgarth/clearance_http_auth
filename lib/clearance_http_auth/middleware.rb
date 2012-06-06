@@ -18,7 +18,7 @@ module Clearance
       def call(env)
         if targeting_api?(env)
           @app = Rack::Auth::Basic.new(@app) do |username, password|
-            env['clearance.current_user'] = ::User.authenticate(username, password)
+            env[:clearance].sign_in ::User.authenticate(username, password)
           end
         end
         @app.call(env)
