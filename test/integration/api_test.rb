@@ -57,6 +57,11 @@ class APITest < ActiveSupport::TestCase
       assert_match /Sign in/, last_response.body
     end
 
+    should "invoke HTTP authorization when detecting a configured API format in Accept header" do
+      header "Accept", "application/json"
+      get '/entrances'
+      assert_equal 401, last_response.status
+    end
   end
 
 end
